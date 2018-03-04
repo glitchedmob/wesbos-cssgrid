@@ -9,36 +9,32 @@
 </head>
 <body>
 	<div class="container">
-		<div class="itm itm1">1</div>
-		<div class="itm itm2">2</div>
-		<div class="itm itm3">3</div>
-		<div class="itm itm4">4</div>
-		<div class="itm itm5">5</div>
-		<div class="itm itm6">6</div>
-		<div class="itm itm7">7</div>
-		<div class="itm itm8">8</div>
-		<div class="itm itm9">9</div>
+		<div class="item logo">Logo</div>
+		<div class="item nav">Nav</div>
+		<div class="item content">
+			<p>I'm the content</p>
+		</div>
 	</div>
 	<style>
 		.container {
 			display: grid;
 			grid-gap: 20px;
-			height: 500px;
-			grid-template-columns: repeat(5, 100px );
-			border: 10px solid var(--yellow);
-			justify-items: stretch;
-			align-items: center;
-			justify-content: space-between;
-			align-content: space-around;
+			grid-template-columns: repeat(10, 1fr)
 		}
 
-		.itm {
-			background: white;
+		.logo {
+			grid-column: span 2;
+			order: 2;
 		}
 
-		.itm5 {
-			justify-self: center;
-			align-self: stretch;
+		.nav {
+			grid-column: span 8;
+			order: 1;
+		}
+
+		.content {
+			grid-column: 1 / -1;
+			order: 3;
 		}
 	</style>
 </body>
