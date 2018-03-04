@@ -8,34 +8,132 @@
 	<title>Document</title>
 </head>
 <body>
-	<div class="container">
-		<div class="item logo">Logo</div>
-		<div class="item nav">Nav</div>
-		<div class="item content">
-			<p>I'm the content</p>
+	<div class="albums">
+		<div class="album">
+			<img src="https://source.unsplash.com/random/300x300?v=1" class="album__artwork">
+			<div class="album__details">
+				<h2>Album Title</h2>
+				<p class="album__artist">Artist Name</p>
+				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
+			</div>
+		</div>
+		<div class="album">
+			<img src="https://source.unsplash.com/random/300x300?v=2" class="album__artwork">
+			<div class="album__details">
+				<h2>Album Title</h2>
+				<p class="album__artist">Artist Name</p>
+				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
+				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
+			</div>
+		</div>
+		<div class="album">
+			<img src="https://source.unsplash.com/random/300x300?v=3" class="album__artwork">
+			<div class="album__details">
+				<h2>Album Title</h2>
+				<p class="album__artist">Artist Name</p>
+				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
+				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
+			</div>
+		</div>
+		<div class="album">
+			<img src="https://source.unsplash.com/random/300x300?v=4" class="album__artwork">
+			<div class="album__details">
+				<h2>Album Title</h2>
+				<p class="album__artist">Artist Name</p>
+				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
+			</div>
+		</div>
+		<div class="album">
+			<img src="https://source.unsplash.com/random/300x300?v=5" class="album__artwork">
+			<div class="album__details">
+				<h2>Album Title</h2>
+				<p class="album__artist">Artist Name</p>
+				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
+			</div>
+		</div>
+		<div class="album">
+			<img src="https://source.unsplash.com/random/300x300?v=6" class="album__artwork">
+			<div class="album__details">
+				<h2>Album Title</h2>
+				<p class="album__artist">Artist Name</p>
+				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
+			</div>
+		</div>
+		<div class="album">
+			<img src="https://source.unsplash.com/random/300x300?v=7" class="album__artwork">
+			<div class="album__details">
+				<h2>Album Title</h2>
+				<p class="album__artist">Artist Name</p>
+				<p class="album__desc">Short.</p>
+			</div>
+		</div>
+		<div class="album">
+			<img src="https://source.unsplash.com/random/300x300?v=8" class="album__artwork">
+			<div class="album__details">
+				<h2>Album Title</h2>
+				<p class="album__artist">Artist Name</p>
+				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
+				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
+			</div>
+		</div>
+		<div class="album">
+			<img src="https://source.unsplash.com/random/300x300?v=9" class="album__artwork">
+			<div class="album__details">
+				<h2>Album Title</h2>
+				<p class="album__artist">Artist Name</p>
+				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
+			</div>
+		</div>
+		<div class="album">
+			<img src="https://source.unsplash.com/random/300x300?v=10" class="album__artwork">
+			<div class="album__details">
+				<h2>Album Title</h2>
+				<p class="album__artist">Artist Name</p>
+				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
+			</div>
+		</div>
+		<div class="album">
+			<img src="https://source.unsplash.com/random/300x300?v=11" class="album__artwork">
+			<div class="album__details">
+				<h2>Album Title</h2>
+				<p class="album__artist">Artist Name</p>
+				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
+				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
+			</div>
+		</div>
+		<div class="album">
+			<img src="https://source.unsplash.com/random/300x300?v=12" class="album__artwork">
+			<div class="album__details">
+				<h2>Album Title</h2>
+				<p class="album__artist">Artist Name</p>
+				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
+			</div>
 		</div>
 	</div>
 	<style>
-		.container {
+
+		.albums {
 			display: grid;
 			grid-gap: 20px;
-			grid-template-columns: repeat(10, 1fr)
+			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 		}
 
-		.logo {
-			grid-column: span 2;
-			order: 2;
+		.album {
+			background: rgba(255, 255, 255, 0.2);
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+			display: grid;
+			grid-template-columns: 150px 1fr;
+			grid-gap: 10px;
+			align-items: center;
+			color: white;
+			font-weight: 100;
 		}
 
-		.nav {
-			grid-column: span 8;
-			order: 1;
-		}
+		.album__artwork {
+      width: 100%;
+    }
 
-		.content {
-			grid-column: 1 / -1;
-			order: 3;
-		}
 	</style>
 </body>
 </html>
