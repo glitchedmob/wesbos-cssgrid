@@ -8,132 +8,146 @@
 	<title>Document</title>
 </head>
 <body>
-	<div class="albums">
-		<div class="album">
-			<img src="https://source.unsplash.com/random/300x300?v=1" class="album__artwork">
-			<div class="album__details">
-				<h2>Album Title</h2>
-				<p class="album__artist">Artist Name</p>
-				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
-			</div>
-		</div>
-		<div class="album">
-			<img src="https://source.unsplash.com/random/300x300?v=2" class="album__artwork">
-			<div class="album__details">
-				<h2>Album Title</h2>
-				<p class="album__artist">Artist Name</p>
-				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
-				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
-			</div>
-		</div>
-		<div class="album">
-			<img src="https://source.unsplash.com/random/300x300?v=3" class="album__artwork">
-			<div class="album__details">
-				<h2>Album Title</h2>
-				<p class="album__artist">Artist Name</p>
-				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
-				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
-			</div>
-		</div>
-		<div class="album">
-			<img src="https://source.unsplash.com/random/300x300?v=4" class="album__artwork">
-			<div class="album__details">
-				<h2>Album Title</h2>
-				<p class="album__artist">Artist Name</p>
-				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
-			</div>
-		</div>
-		<div class="album">
-			<img src="https://source.unsplash.com/random/300x300?v=5" class="album__artwork">
-			<div class="album__details">
-				<h2>Album Title</h2>
-				<p class="album__artist">Artist Name</p>
-				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
-			</div>
-		</div>
-		<div class="album">
-			<img src="https://source.unsplash.com/random/300x300?v=6" class="album__artwork">
-			<div class="album__details">
-				<h2>Album Title</h2>
-				<p class="album__artist">Artist Name</p>
-				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
-			</div>
-		</div>
-		<div class="album">
-			<img src="https://source.unsplash.com/random/300x300?v=7" class="album__artwork">
-			<div class="album__details">
-				<h2>Album Title</h2>
-				<p class="album__artist">Artist Name</p>
-				<p class="album__desc">Short.</p>
-			</div>
-		</div>
-		<div class="album">
-			<img src="https://source.unsplash.com/random/300x300?v=8" class="album__artwork">
-			<div class="album__details">
-				<h2>Album Title</h2>
-				<p class="album__artist">Artist Name</p>
-				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
-				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
-			</div>
-		</div>
-		<div class="album">
-			<img src="https://source.unsplash.com/random/300x300?v=9" class="album__artwork">
-			<div class="album__details">
-				<h2>Album Title</h2>
-				<p class="album__artist">Artist Name</p>
-				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
-			</div>
-		</div>
-		<div class="album">
-			<img src="https://source.unsplash.com/random/300x300?v=10" class="album__artwork">
-			<div class="album__details">
-				<h2>Album Title</h2>
-				<p class="album__artist">Artist Name</p>
-				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
-			</div>
-		</div>
-		<div class="album">
-			<img src="https://source.unsplash.com/random/300x300?v=11" class="album__artwork">
-			<div class="album__details">
-				<h2>Album Title</h2>
-				<p class="album__artist">Artist Name</p>
-				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
-				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
-			</div>
-		</div>
-		<div class="album">
-			<img src="https://source.unsplash.com/random/300x300?v=12" class="album__artwork">
-			<div class="album__details">
-				<h2>Album Title</h2>
-				<p class="album__artist">Artist Name</p>
-				<p class="album__desc">Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet. Lorem ipsum dolsor sit amet.</p>
-			</div>
+	<div class="overlay">
+		<div class="overlay-inner">
+			<button class="close">Close x</button>
+			<img>
 		</div>
 	</div>
+
+	<section class="gallery">
+
+	</section>
 	<style>
-
-		.albums {
+		.gallery {
 			display: grid;
-			grid-gap: 20px;
-			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fill, 100px);
+      grid-auto-rows: 100px;
+      grid-auto-flow: dense;
 		}
 
-		.album {
-			background: rgba(255, 255, 255, 0.2);
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-			padding: 20px;
+		.item {
+			overflow: hidden;
 			display: grid;
-			grid-template-columns: 150px 1fr;
-			grid-gap: 10px;
+			grid-template-columns: 1;
+			grid-template-rows: 1;
+		}
+
+		.item img {
+			grid-column: 1 / -1;
+			grid-row: 1 / -1; 
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.item__overlay {
+			background: #FFC60032;
+			grid-column: 1 / -1;
+			grid-row: 1 / -1; 
+			position: relative;
+			display: grid;
+			justify-items: center;
 			align-items: center;
-			color: white;
-			font-weight: 100;
+			transform: translateY(100%);
+			transition: 300ms ease-in-out;
 		}
 
-		.album__artwork {
-      width: 100%;
-    }
+		.item__overlay button {
+			background: rgba(0, 0, 0, 0.3);
+			border: 2px solid white;
+			color: white;
+			text-transform: capitalize;
+			padding: 10px;
+		}
 
+		.item:hover .item__overlay {
+			transform: translateY(0); 
+		}
+
+		.item.v1 {
+			grid-row: span 1;
+		}
+
+		.item.v2 {
+			grid-row: span 2;
+		}
+
+		.item.v3 {
+			grid-row: span 3;
+		}
+
+		.item.v4 {
+			grid-row: span 4;
+		}
+
+		.item.h1 {
+			grid-column: span 1;
+		}
+
+		.item.h2 {
+			grid-column: span 2;
+		}
+
+		.item.h3 {
+			grid-column: span 3;
+		}
+
+		.item.h4 {
+			grid-column: span 4;
+		}
 	</style>
+
+	<script>
+		const gallery = document.querySelector('.gallery');
+		const overlay = document.querySelector('.overlay');
+		const overlayImg = overlay.querySelector('img');
+		const overlayClose = overlay.querySelector('.close ');
+
+		function generateMarkup([h, v]) {
+			return `
+				<div class="item h${h} v${v}">
+						<img src="assets/images/${randomNumber(12)}.jpg">
+						<div class="item__overlay">
+							<button>View →</button>
+						</div>
+        </div>
+			`;
+		}
+
+		function randomNumber(limit) {
+			return Math.floor(Math.random() * limit) + 1;
+		}
+
+		function handleImageClick(e) {
+			const image = e.currentTarget.querySelector('img').src;
+			overlayImg.src = image;
+
+			openOverlay();
+		}
+
+		function openOverlay() {
+			overlay.classList.add('open');
+		}
+
+		function closeOverlay() {
+			overlay.classList.remove('open');
+		}
+
+		const digits = Array.from({ length: 50 }, () => [randomNumber(4), randomNumber(4)])
+			.concat([
+				[1,1], [1,1], [1,1], [1,1], [1,1], [1,1], [1,1], [1,1],
+				[1,1], [1,1], [1,1], [1,1], [1,1], [1,1], [1,1], [1,1],
+				[1,1], [1,1], [1,1], [1,1]
+			]);
+
+		const html = digits.map(generateMarkup).join('');
+		gallery.innerHTML = html;
+
+		const items = document.querySelectorAll('.item');
+		items.forEach(item => item.addEventListener('click', handleImageClick))
+
+		overlayClose.addEventListener('click', closeOverlay);
+	</script>
 </body>
 </html>
