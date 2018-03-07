@@ -8,16 +8,31 @@
 	<title>Document</title>
 </head>
 <body>
-	<div class="codepen">
-		<header class="pen"></header>
-		<section class="code"></section>
-		<section class="preview"></section>
-		<footer class="settings"></footer>
+
+	<div class="grid" style="--cols: 10;">
+		<div class="item">1</div>
+		<div class="item" style="--span: 7;">
+			<div class="grid" style="--cols: 2;">
+				<div class="item">1</div>
+				<div class="item">2</div>
+			</div>
+		</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
 	</div>
 
-	</section>
 	<style>
+		.grid {
+			display: grid;
+			grid-gap: 20px;
+			grid-template-columns: repeat(var(--cols, 12), minmax(0, 1fr));
+		}
 
+		.item {
+			min-width: 0;
+			width: 100%;
+			grid-column: span var(--span, 1);
+		}
 	</style>
 </body>
 </html>
